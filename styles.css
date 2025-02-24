@@ -1,37 +1,116 @@
+/* RESET & BODY CƠ BẢN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #f2f2f2;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  section {
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  h2 {
-    margin-top: 0;
-    color: #333;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  ul li {
-    margin: 5px 0;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f2f2f2;
-  }
-  
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  padding-bottom: 50px;
+}
+
+/* HEADER & FOOTER */
+header, footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+/* PHẦN THÔNG TIN LIÊN HỆ */
+section {
+  margin: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+section h2 {
+  margin-bottom: 10px;
+}
+
+/* DANH SÁCH UL */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 6px 0;
+}
+
+/* ACCORDION (DETAILS) */
+details {
+  margin: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0 20px;
+  padding-bottom: 10px; /* Khoảng trống dưới */
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+details:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+details:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* SUMMARY: TIÊU ĐỀ ACCORDION */
+details summary {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 0;
+  position: relative;
+  list-style: none;  /* Ẩn chấm đầu dòng mặc định */
+}
+
+/* Ẩn mũi tên mặc định của trình duyệt (Chrome, Safari) */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Tạo mũi tên custom (▶ hoặc ▼) */
+details summary::before {
+  content: "▶"; /* Mũi tên lúc đóng */
+  font-size: 16px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Khi mở (details[open]), đổi mũi tên */
+details[open] summary::before {
+  content: "▼"; /* Mũi tên lúc mở */
+  transform: rotate(0deg);
+}
+
+/* NỘI DUNG BÊN TRONG DETAILS */
+details p,
+details ul {
+  margin-left: 20px; /* tạo khoảng cách lùi vào */
+  margin-bottom: 10px;
+}
+
+details ul li {
+  margin-bottom: 5px;
+}
+
+/* FOOTER */
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
