@@ -24,7 +24,7 @@ header h1 {
   margin-bottom: 5px;
 }
 
-/* PHẦN THÔNG TIN LIÊN HỆ */
+/* PHẦN THÔNG TIN LIÊN HỆ VÀ SECTION CHUNG */
 section {
   margin: 20px;
   background-color: #fff;
@@ -100,7 +100,7 @@ details[open] summary::before {
 /* NỘI DUNG BÊN TRONG DETAILS */
 details p,
 details ul {
-  margin-left: 20px; /* tạo khoảng cách lùi vào */
+  margin-left: 20px; /* Tạo khoảng cách lùi vào */
   margin-bottom: 10px;
 }
 
